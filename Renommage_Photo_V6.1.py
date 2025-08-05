@@ -632,6 +632,16 @@ class PhotoRenameApp:
             self.user_zoom = 1.0
             self.afficher_photo()
 
+    # --- Alias pour compatibilité avec les anciens boutons de navigation ---
+    def prev_photo(self):
+        self.photo_prec()
+
+    def next_photo(self):
+        self.photo_suiv()
+
+    def rename_photo(self):
+        self.renommer_photo()
+
     def ask_openai_session(self, path):
         fp = image_fingerprint(path)
         data = {}
