@@ -1,0 +1,4 @@
+{
+  "openai_api_key": "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",
+  "imgur_client_id": "0fa5b623c238dcc"
+}

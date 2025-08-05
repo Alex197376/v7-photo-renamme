@@ -1,0 +1,168 @@
+[14/04/2025 - 18:54]
+Dossier destination : C:\Users\USER\Desktop\Photo\25_COURTOIS_0117
+Nombre de photos copiées : 166
+---
+[15/04/2025 - 12:51]
+Dossier destination : C:\Users\USER\Desktop\Photo\25_BUTET_0116
+Nombre de photos copiées : 22
+---
+[15/04/2025 - 13:28]
+Dossier destination : C:\Users\USER\Desktop\test photo\test  test s100
+Nombre de photos copiées : 1
+---
+[15/04/2025 - 13:32]
+Dossier destination : C:\Users\USER\Desktop\test photo\test  test s100
+Nombre de photos copiées : 2
+---
+[15/04/2025 - 13:38]
+Dossier destination : C:\Users\USER\Desktop\test photo\test  test s100
+Nombre de photos copiées : 2
+---
+[15/04/2025 - 13:40]
+Dossier destination : C:\Users\USER\Desktop\test photo\test  test s100
+Nombre de photos copiées : 2
+---
+[15/04/2025 - 13:42]
+Dossier destination : C:\Users\USER\Desktop\test photo\test  test s100
+Nombre de photos copiées : 2
+---
+[15/04/2025 - 13:43]
+Dossier destination : C:\Users\USER\Desktop\test photo\test  test s100
+Nombre de photos copiées : 2
+---
+[15/04/2025 - 15:56]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:00]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:02]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:03]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:10]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:11]
+Dossier destination : C:\Users\USER\Desktop\test photo\test  test s100
+Nombre de photos copiées : 8
+---
+[15/04/2025 - 16:11]
+Dossier destination : C:/Users/USER/Desktop/test photo
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:23]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:24]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:24]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 8
+---
+[15/04/2025 - 16:25]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:29]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 8
+---
+[15/04/2025 - 16:29]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:34]
+Dossier destination : C:/Users/USER/Desktop/test photo
+Nombre de photos copiées : 0
+---
+[15/04/2025 - 16:40]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[16/04/2025 - 16:35]
+Dossier destination : C:\Users\USER\Desktop\Photo\25_PUYAVIN-H_0138
+Nombre de photos copiées : 56
+---
+[21/04/2025 - 16:44]
+Dossier destination : C:\Users\USER\Desktop\test photo\test  test s100
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 17:33]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 17:57]
+Dossier destination : C:/Users/USER/Desktop/test photo
+Nombre de photos copiées : 0
+---
+[21/04/2025 - 17:59]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 17:59]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 17:59]
+Dossier destination : C:/Users/USER/Desktop/test photo/test demaret
+Nombre de photos copiées : 0
+---
+[21/04/2025 - 18:00]
+Dossier destination : C:/Users/USER/Desktop/test photo/test demaret/ELECTRICITÉ
+Nombre de photos copiées : 0
+---
+[21/04/2025 - 18:06]
+Dossier destination : C:/Users/USER/Desktop/test photo/test demaret/ELECTRICITÉ
+Nombre de photos copiées : 0
+---
+[21/04/2025 - 18:06]
+Dossier destination : C:/Users/USER/Desktop/test photo/test  test s100
+Nombre de photos copiées : 0
+---
+[21/04/2025 - 18:07]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 18:07]
+Dossier destination : C:/Users/USER/Desktop/test photo/Nouveau dossier (2)
+Nombre de photos copiées : 0
+---
+[21/04/2025 - 18:08]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 18:09]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 18:10]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 18:10]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 18:10]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 18:11]
+Dossier destination : C:\Users\USER\Desktop\test photo
+Nombre de photos copiées : 2
+---
+[21/04/2025 - 18:13]
+Dossier destination : C:/Users/USER/Desktop/test photo/Nouveau dossier (2)
+Nombre de photos copiées : 0
+---
