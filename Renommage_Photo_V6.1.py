@@ -515,6 +515,12 @@ class PhotoRenameApp:
         target.delete(0, tk.END)
         target.insert(0, new_val)
 
+    def on_custom_left_by_label(self, label):
+        for i, var in enumerate(self.custom_vars):
+            if var.get() == label:
+                self.on_custom_left(i)
+                break
+
     def on_custom_right(self, idx):
         new_lbl = simpledialog.askstring("Renommer le bouton", "Nouveau label ?")
         if new_lbl:
@@ -631,6 +637,16 @@ class PhotoRenameApp:
             self.angle = 0
             self.user_zoom = 1.0
             self.afficher_photo()
+
+    # --- Alias pour compatibilité avec les anciens boutons de navigation ---
+    def prev_photo(self):
+        self.photo_prec()
+
+    def next_photo(self):
+        self.photo_suiv()
+
+    def rename_photo(self):
+        self.renommer_photo()
 
     def ask_openai_session(self, path):
         fp = image_fingerprint(path)
@@ -1019,6 +1035,61 @@ class PhotoRenameApp:
                     except Exception as e:
                         self.log_insert(f"❌ Erreur déplacement de {path} : {e}\n")
         messagebox.showinfo("Organisation terminée", f"{moved_count} photo(s) déplacée(s).")
+
+    def load_tab_preset(self, frame, preset_name):
+        all_presets, fixed_buttons = self.load_presets_data()
+        labels80 = all_presets.get(preset_name, [])
+        if len(labels80) < 1:
+            messagebox.showwarning(
+                "Preset introuvable",
+                f"Le preset '{preset_name}' n'existe pas ou est vide.")
+            return
+
+        # 1) On vide l’onglet
+        for w in frame.winfo_children():
+            w.destroy()
+
+        # 2) Création des 80 boutons (10×8)
+        cols, w_btn, h_btn, m = 10, 90, 25, 4
+        for idx, text in enumerate(labels80):
+            r, c = divmod(idx, cols)
+            btn = tk.Button(frame, text=text, width=int(w_btn/8))
+            btn.config(bg=("#e0e0e0" if text.lower().startswith("btn") else "#d0eaff"))
+            btn.grid(row=r, column=c, padx=m, pady=m)
+            btn.bind("<Button-1>", lambda e, t=text: self.on_custom_left_by_label(t))
+            btn.bind("<Button-3>", lambda e, i=idx: self.on_custom_right(frame, i))
+
+        # 3) Ligne fixe (vos 45+ boutons)
+        fixed_row = 8
+        for idx, text in enumerate(fixed_buttons):
+            btn = tk.Button(frame, text=text, width=int(w_btn/8))
+            btn.config(bg="#c0c0c0")
+            btn.grid(row=fixed_row, column=idx, padx=m, pady=m, sticky="w")
+            btn.bind("<Button-1>", lambda e, t=text: self.on_fixed_left(t))
+            btn.bind("<Button-3>", lambda e, t=text: self.on_fixed_right(t))
+
+        # 4) On renomme l’onglet
+        self.tab_control.tab(frame.index - 1, text=preset_name)
+
+    def on_tab_double_click(self, event):
+        """
+        Gestionnaire du double-clic sur la barre d'onglets :
+        demande à l'utilisateur quel preset affecter.
+        """
+        # Déterminer quel onglet a été cliqué
+        x, y = event.x, event.y
+        for idx, frame in enumerate(self.tab_frames):
+            bbox = self.tab_control.bbox(idx)
+            if bbox and bbox[0] <= x <= bbox[0] + bbox[2]:
+                choix = simpledialog.askstring(
+                    "Choisir preset",
+                    "Nom du preset à charger dans cet onglet :",
+                    parent=self.master)
+                if choix:
+                    # Mémoriser et recharger
+                    ConfigManager.Current.TabPresetMapping[frame.index] = choix
+                    self.load_tab_preset(frame, choix)
+                break
 
 def launch_photo_rename():
     root = tk.Tk()
@@ -1557,62 +1628,6 @@ def launch_main_menu():
     CreateToolTip(btn2, "Lancer l'assistant de renommage des photos")
     tk.Button(front_frame, text="Quitter", font=("Arial", 12), width=15, command=launcher.destroy, bg="#f44336", fg="white").pack(pady=20)
     launcher.mainloop()
-
-    def load_tab_preset(self, frame, preset_name):
-        all_presets, fixed_buttons = self.load_presets_data()
-        labels80 = all_presets.get(preset_name, [])
-        if len(labels80) < 1:
-            messagebox.showwarning(
-                "Preset introuvable",
-                f"Le preset '{preset_name}' n'existe pas ou est vide.")
-            return
-
-        # 1) On vide l’onglet
-        for w in frame.winfo_children():
-            w.destroy()
-
-        # 2) Création des 80 boutons (10×8)
-        cols, w_btn, h_btn, m = 10, 90, 25, 4
-        for idx, text in enumerate(labels80):
-            r, c = divmod(idx, cols)
-            btn = tk.Button(frame, text=text, width=int(w_btn/8))
-            btn.config(bg=("#e0e0e0" if text.lower().startswith("btn") else "#d0eaff"))
-            btn.grid(row=r, column=c, padx=m, pady=m)
-            btn.bind("<Button-1>", lambda e, t=text: self.on_custom_left_by_label(t))
-            btn.bind("<Button-3>", lambda e, i=idx: self.on_custom_right(frame, i))
-
-        # 3) Ligne fixe (vos 45+ boutons)
-        fixed_row = 8
-        for idx, text in enumerate(fixed_buttons):
-            btn = tk.Button(frame, text=text, width=int(w_btn/8))
-            btn.config(bg="#c0c0c0")
-            btn.grid(row=fixed_row, column=idx, padx=m, pady=m, sticky="w")
-            btn.bind("<Button-1>", lambda e, t=text: self.on_fixed_left(t))
-            btn.bind("<Button-3>", lambda e, t=text: self.on_fixed_right(t))
-
-        # 4) On renomme l’onglet
-        self.tab_control.tab(frame.index - 1, text=preset_name)
-
-
-    def on_tab_double_click(self, event):
-        """
-        Gestionnaire du double-clic sur la barre d'onglets :
-        demande à l'utilisateur quel preset affecter.
-        """
-        # Déterminer quel onglet a été cliqué
-        x, y = event.x, event.y
-        for idx, frame in enumerate(self.tab_frames):
-            bbox = self.tab_control.bbox(idx)
-            if bbox and bbox[0] <= x <= bbox[0] + bbox[2]:
-                choix = simpledialog.askstring(
-                    "Choisir preset",
-                    "Nom du preset à charger dans cet onglet :",
-                    parent=self.master)
-                if choix:
-                    # Mémoriser et recharger
-                    ConfigManager.Current.TabPresetMapping[frame.index] = choix
-                    self.load_tab_preset(frame, choix)
-                break
 
 
 class ConfigManager:
